@@ -10,27 +10,15 @@
                     @if (Auth::guest())
                         <li><a href="#" data-toggle="modal" data-target="#login-modal">Se connecter</a>
                     </li>
-                    <li><a href="{{ url('utilisateur/register') }}">S'inscrire</a>
+                    <li><a href="{{ url('/register') }}">S'inscrire</a>
                     </li>
                     @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ url('/utilisateur/logout') }}"
+                        <li>
+                            <a href="{{ url('/logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                         Logout
                                     </a>
-
-                                    <form id="logout-form" action="{{ url('/utilisateur/logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
                         </li>
                     @endif
                     <li><a href="{{ route('page',['page' =>'les-activites-des-instituts']) }}">L'institut</a>
