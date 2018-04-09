@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+/*
+* Routes des pages
+*/
+Route::get('/', ['as'=>'accueil', 'uses' => 'PageController@accueil']);
+Route::get('{page}/{subs?}', ['as'=>'page', 'uses' => 'PageController@index'])
+    ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
+

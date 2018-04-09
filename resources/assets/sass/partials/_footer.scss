@@ -1,0 +1,25 @@
+#menu-fond {
+  padding-top: 5px;
+  margin: 0;
+  font-size: 12px;
+  list-style: none;
+}
+@media (max-width: 991px) {
+  #menu-fond {
+    text-align: center;
+  }
+}
+#menu-fond > li {
+  display: inline-block;
+}
+#menu-fond > li a {
+  color: #eeeeee;
+}
+#menu-fond > li + li:before {
+  content: "|\00a0";
+  padding: 0 5px;
+  color: #f7f7f7;
+}
+#menu-fond> .active {
+  color: #999999;
+}
