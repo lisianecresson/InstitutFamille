@@ -12,3 +12,4 @@
           <!--<li><a href="{{ url('admin/typeformation') }}"><i class="fa fa-folder"></i> <span>Types de formation</span></a></li>-->
 <li><a href="{{ url('admin/formation') }}"><i class="fa fa-graduation-cap"></i> <span>Formations</span></a></li>
 <li><a href="{{ url('admin/formationlieu') }}"><i class="fa fa-graduation-cap"></i> <span>Ajouter dates et lieux formations</span></a></li>
+<li><a href="{{ url('admin/slider') }}"><i class="fa fa-arrows-h"></i> <span>Slider</span></a></li>

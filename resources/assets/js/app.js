@@ -15,6 +15,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+window.onload = function() {
+/*matchHeights*/
+require('./scripts/matchHeights.js');
+}
+
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 const app = new Vue({

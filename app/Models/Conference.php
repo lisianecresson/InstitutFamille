@@ -36,6 +36,18 @@ class Conference extends Model
 | FUNCTIONS
 |--------------------------------------------------------------------------
 */
+
+  /**
+   * getFullNameAttribute : retourn la date, le lieu et le titre de l'evenement
+   *
+   * @author: Lisiane Cresson
+   * @return full_name
+   */
+  public function getFullEvenementAttribute($value) {
+     return $this->dateDebut.' - '.$this->lieu->ville.' - '.$this->titre;
+  }
+
+
   /**
    * sluggable : retourn un slug à partir du titre
    *
@@ -74,5 +86,15 @@ class Conference extends Model
         public function lieu(){
             return $this->belongsTo('App\Models\Lieu');
         }
+/**
+* slider: relation 1 à n avec slider
+*
+* @author: Lisiane Cresson
+* @return hasMany slider
+*/
+
+    public function conference(){
+        return $this->hasMany('App\Models\Slider');
+    }
 
 }

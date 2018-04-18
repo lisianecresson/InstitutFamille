@@ -31,8 +31,10 @@ Route::group([
     CRUD::resource('conference', 'ConferenceCrudController');
     // crud des types de formation
     CRUD::resource('typeformation', 'TypeFormationCrudController');
-  // crud des formations
+    // crud des formations
     CRUD::resource('formation', 'FormationCrudController');
     // crud des formations
     CRUD::resource('formationlieu', 'FormationLieuCrudController');
+    // crud du slider
+    CRUD::resource('slider', 'SliderCrudController');
 }); // this should be the absolute last line of this file

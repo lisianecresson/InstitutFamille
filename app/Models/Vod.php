@@ -71,7 +71,7 @@ class Vod extends Model
     {
 
         $filename="vod_".time().".jpg";
-        $img = Image::make($value)->resize(null, 400, function ($constraint) {
+        $img = Image::make($value)->resize(400, null, function ($constraint) {
             $constraint->aspectRatio();
         });
         Storage::disk('uploads')->put('vods/'.$filename, $img->stream());

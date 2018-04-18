@@ -30,7 +30,7 @@
                 <ul class="nav navbar-nav navbar-left">
                     
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Formations <b class="caret"></b></a>
+                        <a href="{{ route('page',['page' =>'nos-formations']) }}" data-hover="dropdown" data-delay="200">Formations <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -106,7 +106,7 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Evenements <b class="caret"></b></a>
+                        <a href="{{ route('page',['page' =>'les-evenements']) }}" data-hover="dropdown" data-delay="200">Evenements <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -183,7 +183,7 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Formateurs <b class="caret"></b></a>
+                        <a href="{{ route('page',['page' =>'formateurs']) }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Formateurs <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -263,7 +263,7 @@
 
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Boutique <b class="caret"></b></a>
+                        <a href="{{ route('page',['page' =>'notre-boutique']) }}" data-hover="dropdown" data-delay="200">Boutique <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">

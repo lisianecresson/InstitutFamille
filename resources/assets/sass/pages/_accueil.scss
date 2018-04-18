@@ -1,0 +1,21 @@
+.accueil {
+	.accueil__slide-lien{
+		color: #eeeeee;
+		&:hover{
+			color: #999999;
+		}
+	}
+	.accueil__slide-image{
+		position: relative;
+	}
+	.accueil__slide-titre{
+		position: absolute;
+		top:0;
+		margin: 15%;
+		padding: 10px;
+		background-color: rgba(105, 105, 105, 0.7);
+	}
+	.accueil__rubrique-image{
+		width: 100%;
+	}
+}

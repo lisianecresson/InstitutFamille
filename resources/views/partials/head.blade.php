@@ -17,7 +17,7 @@
         <link href="{{ asset ("css/owl.carousel.css") }}" rel="stylesheet">
         <link href="{{ asset ("css/owl.theme.css") }}" rel="stylesheet">
         <!-- theme stylesheet -->
-        <link href="{{ asset ("css/style.mono.css") }}" rel="stylesheet" id="theme-stylesheet">
+        <link href="{{ asset ("css/style.blue.css") }}" rel="stylesheet" id="theme-stylesheet">
         
         <!-- your stylesheet with modifications -->
         <link href="{{ asset ("css/custom.css") }}" rel="stylesheet">

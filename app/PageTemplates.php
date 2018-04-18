@@ -96,5 +96,62 @@ trait PageTemplates
                         'placeholder' => trans('backpack::pagemanager.content_placeholder'),
                     ]);
 
-        }             
+        }     
+    private function evenements()
+        {
+
+            $this->crud->addField([
+                        'name' => 'content',
+                        'label' => trans('backpack::pagemanager.content'),
+                        'type' => 'wysiwyg',
+                        'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+                    ]);
+            $this->crud->addField([ // image
+                        'label' => "Image de pub",
+                        'name' => "image",
+                        'type' => 'browse',
+                        //'readonly' => true // Default. Set to false to disable input readonly state 
+                        'fake' => true,
+                        'store_in' => 'extras',
+                    ]);
+
+        }  
+         private function formations()
+        {
+
+            $this->crud->addField([
+                        'name' => 'content',
+                        'label' => trans('backpack::pagemanager.content'),
+                        'type' => 'wysiwyg',
+                        'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+                    ]);
+            $this->crud->addField([ // image
+                        'label' => "Image de pub",
+                        'name' => "image",
+                        'type' => 'browse',
+                        //'readonly' => true // Default. Set to false to disable input readonly state 
+                        'fake' => true,
+                        'store_in' => 'extras',
+                    ]);
+
+        }  
+        private function boutique()
+        {
+
+            $this->crud->addField([
+                        'name' => 'content',
+                        'label' => trans('backpack::pagemanager.content'),
+                        'type' => 'wysiwyg',
+                        'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+                    ]);
+            $this->crud->addField([ // image
+                        'label' => "Image de pub",
+                        'name' => "image",
+                        'type' => 'browse',
+                        //'readonly' => true // Default. Set to false to disable input readonly state 
+                        'fake' => true,
+                        'store_in' => 'extras',
+                    ]);
+
+        }    
 }

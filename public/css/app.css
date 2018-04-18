@@ -4,6 +4,30 @@
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.accueil .accueil__slide-lien {
+  color: #eeeeee;
+}
+
+.accueil .accueil__slide-lien:hover {
+  color: #999999;
+}
+
+.accueil .accueil__slide-image {
+  position: relative;
+}
+
+.accueil .accueil__slide-titre {
+  position: absolute;
+  top: 0;
+  margin: 15%;
+  padding: 10px;
+  background-color: rgba(105, 105, 105, 0.7);
+}
+
+.accueil .accueil__rubrique-image {
+  width: 100%;
+}
+
 #menu-fond {
   padding-top: 5px;
   margin: 0;
