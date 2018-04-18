@@ -77,7 +77,7 @@ return [
         ],
         'admins' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
+            'model' => App\Models\BackpackUser::class,
         ],
 
         // 'users' => [
@@ -107,9 +107,9 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
-        'admins' => [
+        'admin' => [
             'provider' => 'admins',
-            'table' => 'admin_password_resets',
+            'table' => 'password_resets',
             'expire' => 60,
         ],
     ],
