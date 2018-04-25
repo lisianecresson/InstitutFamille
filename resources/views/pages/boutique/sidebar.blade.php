@@ -1,41 +1,47 @@
-<div class="col-md-3">
+<div class="col-md-3 boutique__sidebar">
                     <!-- *** MENUS AND FILTERS ***
  _________________________________________________________ -->
+                    
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
                             <h3 class="panel-title">Categories</h3>
                         </div>
-
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked category-menu">
                                 <li>
-                                    <a>Publications</a>
+                                    <div class="text-uppercase boutique__sidebar-sousTitre">Publications</div>
                                     <ul>
-                                        <li><a href="category.html">Livres <span class="badge pull-right">11</span></a> 
+                                        @if($page == 'livre')
+                                        <li class="boutique__sidebar-lienActif"><a href="{{ route('livres') }}">Livres <span class="badge pull-right">{{ $nombreLivre }}</span></a> 
                                         </li>
-                                        <li><a href="category.html">Mémoire d'étudiant <span class="badge pull-right">11</span></a> 
+                                        @else
+                                        <li><a href="{{ route('livres') }}">Livres <span class="badge pull-right">{{ $nombreLivre }}</span></a> 
                                         </li>
+                                        @endif
+                                        @if($page == 'memoire')
+                                        <li class="boutique__sidebar-lienActif"><a href="{{ route('memoires') }}">Mémoire d'étudiant <span class="badge pull-right">{{ $nombreMemoire }}</span></a> 
+                                        </li>
+                                        @else
+                                        <li><a href="{{ route('memoires') }}">Mémoire d'étudiant <span class="badge pull-right">{{ $nombreMemoire }}</span></a>
+                                        </li>
+                                        @endif
                                     </ul>
                                 </li>
-                                <li class="active">
-                                    <a>Multimédia </a>
-                                    <ul>
-                                        <li><a href="category.html">DVD <span class="badge pull-right">11</span></a></li>
-                                        <li><a href="category.html">VOD <span class="badge pull-right">11</span></a></li>
-                                    </ul>
-                                </li>
+
                                 <li>
-                                    <a href="category.html">Kids  <span class="badge pull-right">11</span></a>
+                                    <div class="text-uppercase boutique__sidebar-sousTitre">Multimédia </div>
                                     <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
+                                        @if($page =='dvd')
+                                        <li class="boutique__sidebar-lienActif"><a href="{{ route('dvds') }}">DVD <span class="badge pull-right">{{ $nombreDvd }}</span></a></li>
+                                        @else
+                                        <li><a href="{{ route('dvds') }}">DVD <span class="badge pull-right">{{ $nombreDvd }}</span></a></li>
+                                        @endif
+                                        @if($page=='vod')
+                                        <li class="boutique__sidebar-lienActif"><a href="{{ route('vods') }}">VOD <span class="badge pull-right">{{ $nombreVod }}</span></a></li>
+                                        @else
+                                        <li><a href="{{ route('vods') }}">VOD <span class="badge pull-right">{{ $nombreVod }}</span></a></li>
+                                        @endif
                                     </ul>
                                 </li>
 
@@ -43,6 +49,16 @@
 
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
 
                     <div class="panel panel-default sidebar-menu">
 

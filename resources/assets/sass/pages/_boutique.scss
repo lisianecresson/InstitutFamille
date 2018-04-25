@@ -1,0 +1,23 @@
+.boutique__sidebar {
+	.boutique__sidebar-sousTitre{
+	color: $couleur-principale;
+	padding:10px 15px;
+	font-weight: bold;
+	}
+	.boutique__sidebar-lienActif{
+		background: $couleur-principale;
+		> a{
+			color: #fff !important;
+			.pull-right{
+				color: $couleur-principale;
+				background-color: #fff;
+			}
+		}
+		
+	}
+
+	
+}
+.boutique__categorie-image{
+	width: 100%;
+}

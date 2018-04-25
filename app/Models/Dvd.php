@@ -71,7 +71,7 @@ class Dvd extends Model
     {
 
         $filename="dvd_".time().".jpg";
-        $img = Image::make($value)->resize(null, 400, function ($constraint) {
+        $img = Image::make($value)->resize(548, 400, function ($constraint) {
             $constraint->aspectRatio();
         });
         Storage::disk('uploads')->put('dvds/'.$filename, $img->stream());

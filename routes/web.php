@@ -33,6 +33,31 @@ Route::get('/home', 'HomeController@index')->name('home');
         'as'=>'les-evenements',
         'uses'=>'EvenementController@detailEvenement'
     ]);
+
+
+
+/*
+* Route de la boutique
+*/
+
+Route::get('notre-boutique/livres',[
+        'as'=>'livres',
+        'uses'=>'BoutiqueController@listeLivres'
+    ]);
+Route::get('notre-boutique/dvd',[
+        'as'=>'dvds',
+        'uses'=>'BoutiqueController@listeDvds'
+    ]);
+Route::get('notre-boutique/vod',[
+        'as'=>'vods',
+        'uses'=>'BoutiqueController@listeVods'
+    ]);
+Route::get('notre-boutique/memoires',[
+        'as'=>'memoires',
+        'uses'=>'BoutiqueController@listeMemoires'
+    ]);
+
+
 /*
 *
 * Route des articles
@@ -53,6 +78,12 @@ Route::get('/home', 'HomeController@index')->name('home');
         'as'=>'vod',
         'uses'=>'BoutiqueController@detailsVod'
     ]);
+    // detail d'un memoire
+    Route::get('notre-boutique/memoire/{slugMemoire}',[
+        'as'=>'memoire',
+        'uses'=>'BoutiqueController@detailsMemoire'
+    ]);
+
 /*
 * Routes des pages
 */

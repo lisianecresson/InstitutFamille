@@ -4,7 +4,7 @@
  *
  * @author: Lisiane Cresson
  */
-namespace App\Http\ViewComposers;
+namespace App\Http\ViewComposers\Accueil;
 
 use App\Models\Slider;
 use Illuminate\View\View;

@@ -27,13 +27,24 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         // Using class based composers...
-        view()->composer(
-            'pages.accueil.slider', 'App\Http\ViewComposers\SliderComposer'
-        );
-        view()->composer(
-            'pages.accueil.rubrique', 'App\Http\ViewComposers\RubriqueComposer'
-        );
-
+        
+        //Partials
+            //navigation
+            view()->composer(
+                'partials.navigation', 'App\Http\ViewComposers\Partials\NavigationComposer'
+            );
+        //pages
+            //Accueil
+            view()->composer(
+                'pages.accueil.slider', 'App\Http\ViewComposers\Accueil\SliderComposer'
+            );
+            view()->composer(
+                'pages.accueil.rubrique', 'App\Http\ViewComposers\Accueil\RubriqueComposer'
+            );
+            //Boutique
+            view()->composer(
+                'pages.boutique.sidebar', 'App\Http\ViewComposers\Boutique\SidebarComposer'
+            );
 
     }
 

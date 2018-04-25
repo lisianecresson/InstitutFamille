@@ -24,7 +24,6 @@
                 </div>
             </div>
             <!--/.navbar-header -->
-
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
@@ -36,46 +35,30 @@
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+
+                                            <h5>Formations Longues</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+
+                                                @foreach($formationLongues as $formationLongue)
+                                                <li><a href="category.html">{{$formationLongue->titre}}</a>
                                                 </li>
-                                                <li><a href="category.html">Shirts</a>
+                                                @endforeach
+                                            </ul>
+                                            <h5>Formations au diplôme d'état</h5>
+                                            <ul>
+                                                @foreach($formationEtats as $formationEtat)
+                                                <li><a href="category.html">{{$formationEtat->titre}}</a>
                                                 </li>
-                                                <li><a href="category.html">Pants</a>
-                                                </li>
-                                                <li><a href="category.html">Accessories</a>
-                                                </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Séminaire</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                @foreach($seminaires as $seminaire)
+                                                <li><a href="category.html">{{$seminaire->titre}}</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -263,60 +246,26 @@
 
 
                     <li class="dropdown yamm-fw">
-                        <a href="{{ route('page',['page' =>'notre-boutique']) }}" data-hover="dropdown" data-delay="200">Boutique <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Boutique <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+                                            <h5>Publications</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+                                                <li><a href="{{ route('livres') }}">Livres</a>
                                                 </li>
-                                                <li><a href="category.html">Shirts</a>
-                                                </li>
-                                                <li><a href="category.html">Pants</a>
-                                                </li>
-                                                <li><a href="category.html">Accessories</a>
+                                                <li><a href="{{ route('memoires') }}">Mémoire d'étudiant</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Multimédia</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="{{ route('dvds') }}">DVD</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="{{ route('vods') }}">VOD</a>
                                                 </li>
                                             </ul>
                                         </div>

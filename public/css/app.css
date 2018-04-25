@@ -28,6 +28,29 @@
   width: 100%;
 }
 
+.boutique__sidebar .boutique__sidebar-sousTitre {
+  color: #4993E4;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.boutique__sidebar .boutique__sidebar-lienActif {
+  background: #4993E4;
+}
+
+.boutique__sidebar .boutique__sidebar-lienActif > a {
+  color: #fff !important;
+}
+
+.boutique__sidebar .boutique__sidebar-lienActif > a .pull-right {
+  color: #4993E4;
+  background-color: #fff;
+}
+
+.boutique__categorie-image {
+  width: 100%;
+}
+
 #menu-fond {
   padding-top: 5px;
   margin: 0;

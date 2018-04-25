@@ -13867,7 +13867,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(43);
+module.exports = __webpack_require__(44);
 
 
 /***/ }),
@@ -13893,10 +13893,10 @@ window.Vue = __webpack_require__(36);
 
 window.onload = function () {
   /*matchHeights*/
-  __webpack_require__(48);
+  __webpack_require__(39);
 };
 
-Vue.component('example-component', __webpack_require__(39));
+Vue.component('example-component', __webpack_require__(40));
 
 var app = new Vue({
   el: '#app'
@@ -47112,14 +47112,56 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 /* 39 */
+/***/ (function(module, exports) {
+
+(function () {
+
+  function matchHeight(elementClass) {
+
+    var sortableList = document.getElementsByClassName(elementClass);
+
+    if (sortableList) {
+
+      var heights = [];
+
+      for (var i = 0, x = sortableList.length; i < x; i++) {
+        if (sortableList[i].style && sortableList[i].style.height) {
+          sortableList[i].style.height = '';
+        }
+        heights.push(sortableList[i].clientHeight);
+      };
+
+      var max = Math.max.apply(Math, heights);
+
+      console.log(max);
+
+      for (var j = 0, y = sortableList.length; j < y; j++) {
+        sortableList[j].style.height = max + 'px';
+        console.log(sortableList[j]);
+      }
+    };
+  }
+  matchHeight('hauteur');
+  matchHeight('hauteur_2');
+
+  function run() {
+    matchHeight('hauteur');
+    matchHeight('hauteur_2');
+  }
+
+  window.onresize = run;
+})();
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(40)
+var normalizeComponent = __webpack_require__(41)
 /* script */
-var __vue_script__ = __webpack_require__(41)
+var __vue_script__ = __webpack_require__(42)
 /* template */
-var __vue_template__ = __webpack_require__(42)
+var __vue_template__ = __webpack_require__(43)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -47158,7 +47200,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -47267,7 +47309,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47296,7 +47338,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -47339,56 +47381,10 @@ if (false) {
 }
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */
-/***/ (function(module, exports) {
-
-(function () {
-
-  function matchHeight(elementClass) {
-
-    var sortableList = document.getElementsByClassName(elementClass);
-
-    if (sortableList) {
-
-      var heights = [];
-
-      for (var i = 0, x = sortableList.length; i < x; i++) {
-        if (sortableList[i].style && sortableList[i].style.height) {
-          sortableList[i].style.height = '';
-        }
-        heights.push(sortableList[i].clientHeight);
-      };
-
-      var max = Math.max.apply(Math, heights);
-
-      console.log(max);
-
-      for (var j = 0, y = sortableList.length; j < y; j++) {
-        sortableList[j].style.height = max + 'px';
-        console.log(sortableList[j]);
-      }
-    };
-  }
-  matchHeight('hauteur');
-  matchHeight('hauteur_2');
-
-  function run() {
-    matchHeight('hauteur');
-    matchHeight('hauteur_2');
-  }
-
-  window.onresize = run;
-})();
 
 /***/ })
 /******/ ]);
