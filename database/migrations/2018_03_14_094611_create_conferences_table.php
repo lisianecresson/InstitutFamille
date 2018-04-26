@@ -19,8 +19,8 @@ class CreateConferencesTable extends Migration
             $table->string('titre');
             $table->string('pdf');->nullable();
             $table->string('slug');
-            $table->date('dateDebut');
-            $table->date('dateFin')->nullable();
+            $table->timestamps('dateDebut');
+            $table->timestamps('dateFin')->nullable();
             $table->text('texte')->nullable();
             $table->integer('lieu_id')->nullable();
         });

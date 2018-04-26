@@ -20,8 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 */
     // detail d'une formation
     Route::get('nos-formations/{slugFormation}',[
-        'as'=>'nos-formations',
-        'uses'=>'FormationController@detailFormation'
+        'as'=>'formation',
+        'uses'=>'FormationController@detailsFormation'
     ]);
 /*
 *
@@ -30,11 +30,20 @@ Route::get('/home', 'HomeController@index')->name('home');
 */
     // detail d'un evenement
     Route::get('les-evenements/{slugEvenement}',[
-        'as'=>'les-evenements',
-        'uses'=>'EvenementController@detailEvenement'
+        'as'=>'evenement',
+        'uses'=>'EvenementController@detailsEvenement'
     ]);
 
-
+/*
+*
+* Route des evenements
+*
+*/
+    // detail d'un evenement
+    Route::get('les-formateurs/{slugFormateur}',[
+        'as'=>'formateur',
+        'uses'=>'FormateurController@detailsFormateur'
+    ]);
 
 /*
 * Route de la boutique

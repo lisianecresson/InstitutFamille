@@ -55,30 +55,26 @@
                                         <div class="col-sm-3">
                                             <h5>Séminaire</h5>
                                             <ul>
-                                                @foreach($seminaires as $seminaire)
-                                                <li><a href="category.html">{{$seminaire->titre}}</a>
+                                                @foreach($seminairesColUns as $seminairesColUn)
+                                                <li><a href="category.html">{{$seminairesColUn->titre}}</a>
                                                 </li>
                                                 @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Featured</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                @foreach($seminairesColDeuxs as $seminairesColDeux)
+                                                <li><a href="category.html">{{$seminairesColDeux->titre}}</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
+                                                @endforeach
                                             </ul>
-                                            <h5>Looks and trends</h5>
+                                        </div>
+                                        <div class="col-sm-3">
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                @foreach($seminairesColTrois as $seminairesColTroi)
+                                                <li><a href="category.html">{{$seminairesColTroi->titre}}</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
